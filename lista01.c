@@ -134,21 +134,60 @@ void q13 () {
 
 //14. Faça um programa que leia a base e a altura de um retângulo
 //    e imprima o perímetro (base + altura) e a área (base * altura).
+void q14() {
+    float base, alt, per, area;
+    printf("Digite a base do retângulo:");
+    scanf("%f", &base);
+    printf("Digite a altura do retângulo:");
+    scanf("%f", &alt);
+    per=base+alt;
+    area=base*alt;
+    printf("O perímetro é %f.\n A área é %f.", per, area);
+
+}
 
 //15. Faça um programa que leia o valor de um produto, o percentual
 //    do desconto desejado e imprima o valor do desconto e o valor
 //    do produto subtraindo o desconto.
+void q15() {
+    float vprod, perdes, desc, vcdes;
+    printf("Digite o valor do produto:");
+    scanf("%f", &vprod);
+    printf("Qual o desconto desejado?");
+    scanf("%f", &perdes);
+    desc=perdes/100*vprod;
+    vcdes=vprod-desc;
+    printf("O valor do desconto foi de: %f.\n O valor do produto subtraindo o desconto é de: %f.", desc, vcdes);
+
+}
 
 //16. Faça um programa que calcule o reajuste do salário de um
 //    funcionário. Para isso, o programa deverá ler o salário atual
 //    do funcionário e ler o percentual de reajuste. Ao final imprimir
 //    o valor do novo salário.
+void q16() {
+    float satual, preaj, nsal, reaj;
+    printf("Digite o seu salário atual:");
+    scanf("%f", &satual);
+    printf("Digite o percentual de reajuste desejado:");
+    scanf("%f", &preaj);
+    reaj=preaj/100*satual;
+    nsal=satual+reaj;
+    printf("O valor do novo sálario é: %f.\n", nsal);
+}
 
 //17. Faça um programa que calcule a conversão entre graus centígrados
 //    e Fahrenheit. Para isso, leia o valor em centígrados e calcule
 //    com base na fórmula a seguir. Após calcular o programa deve
 //    imprimir o resultado da conversão.
 //    F = (9 x C +160) / 5
+void q17() {
+    float celsius, fahr;
+    printf("Digite os graus em centígrados:");
+    scanf("%f", &celsius);
+    fahr=(9*celsius+160)/5;
+    printf("A conversão de centígrados e Fahrenheit é de: %f.\n", fahr);
+}
 
 //18. Faça um programa que calcule a quantidade de litros de combustível
 //    consumidos em uma viagem, sabendo-se que o carro tem autonomia de
@@ -162,6 +201,17 @@ void q13 () {
 //    • L = Litros de combustível consumidos
 //    Ao final, o programa deverá imprimir a distância percorrida e a
 //    quantidade de litros consumidos na viagem.
+void q18() {
+    float tempo, velmed, litroscons, dist;
+    const litrocomb=12;
+    printf("Qual foi o tempo da viagem?");
+    scanf("%f", &tempo);
+    printf("Qual a velocidade média durante a viagem?");
+    scanf("%f", &velmed);
+    dist=tempo*velmed;
+    litroscons=dist/litrocomb;
+    printf("A distância percorrida foi de %f.\n A quantidade de litros consumidos na viagem foi de %f.\n", dist, litroscons);
+}
 
 //19. Faça um programa que calcule o valor de uma prestação em atraso.
 //    Para isso, o programa deve ler o valor da prestação vencida, a
@@ -169,12 +219,30 @@ void q13 () {
 //    programa deve imprimir o valor da prestação atrasada, o período
 //    de atraso, os juros que serão cobrados pelo período de atraso, o
 //    valor da prestação acrescido dos juros. Considere juros simples.
+void q19() {
+    float venc, txper, atraso, juros, vcjuros;
+    printf("Digite o valor da prestação vencida, a taxa periódica de juros e o período de atraso:");
+    scanf("%f %f %f", &venc, &txper, &atraso);
+    juros=venc*txper*atraso;
+    vcjuros=venc+juros;
+    printf("O valor da prestação atrasada é de %f\n O período de atrado é de %f\n os juros são de %f\n O valor da prestação acrescido dos juros é de %f", venc, atraso, txper, vcjuros);
+}
 
 //20. Faça um programa que efetue a apresentação do valor da conversão
 //    em real (R$) de um valor lido em dólar (US$). Para isso, será
 //    necessário também ler o valor da cotação do dólar.
+void q20() {
+    float real, dolar, conversor;
+    printf("Digite o valor do real que deseja converter:");
+    scanf("%f", &real);
+    printf("Digite o valor atual do dolar:");
+    scanf("%f", &dolar);
+    conversor=real/dolar;
+    printf("O valor do real é %f.\n O valor do dolar é %f.\n A conversão de real em dolar é %f.\n", real, dolar, conversor);
+}
+
 
 int main() {
-    q13();
+    q20();
     return EXIT_SUCCESS;
 }
