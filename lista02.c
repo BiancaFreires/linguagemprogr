@@ -224,7 +224,25 @@ void q12() {
 }
 
 //13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota da
-//prova 2 de umaluno. O programa deve imprimir o nome, a nota da prova 1, a nota da prova 2, a média das notas e uma das mensagens: "Aprovado", "Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para reprovação e as demais em prova final).
+//prova 2 de umaluno. O programa deve imprimir o nome, a nota da prova 1, a nota da prova 2, 
+//a média das notas e uma das mensagens: "Aprovado", "Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para reprovação e as demais em prova final).
+void q13() {
+	char nome[35];
+	float n1, n2, nf;
+	printf("Digite o seu nome:");
+	scanf(" %35[^\n]", &nome);
+	printf("Digite a nota da prova 1 e da prova 2:");
+	scanf("%f %f", &n1, &n2);
+	nf=n1+n2/2;
+	if (nf>6)
+	{
+		printf("Nome: %s, Aprovado!\n", nome);
+	}
+	if (nf<7)
+	{
+		printf("Nome: %s, Reprovado!\n", nome);
+	}
+}
 
 
 //14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
@@ -234,6 +252,9 @@ void q12() {
 //Maior que R$600,00 e menor ou igual a R$1200,00 20%
 //Maior que R$1200,00 e menor ou igual a R$2000,00 25%
 //Maior que R$2000,00 30%
+void q14() {
+	float sal
+}
 
 
 //15. Um comerciante comprou umproduto e quer vendê-lo com umlucro de 45% se o valor
@@ -305,6 +326,6 @@ void q12() {
 
 
 int main() {
-    q12();
+    q13();
     return EXIT_SUCCESS;
 }
