@@ -421,11 +421,77 @@ void q18() {
 	}
 }
 
-//19. Em um campeonato nacional de arco-e-flecha, tem-se equipes de três jogadores para cada estado. Sabendo-se que os arqueiros de uma equipe não obtiveram o mesmo número de pontos, criar um programa que informe se uma equipe foi classificada, de acordo com a seguinte especificação:
+//19. Em um campeonato nacional de arco-e-flecha, tem-se equipes de três jogadores para cada estado. Sabendo-se que os arqueiros de uma equipe não obtiveram o mesmo número de 
+//pontos, criar um programa que informe se uma equipe foi classificada, de acordo com a seguinte especificação:
 //• Ler os pontos obtidos por cada jogador da equipe;
 //• Mostrar esses valores em ordem decrescente;
 //• Se a soma dos pontos for maior do que 100, imprimir a média aritmética entre eles, caso contrário, imprimir a mensagem "Equipe desclassificada".
-
+void q19() {
+	int pontos, a1, a2, a3, b1, b2, b3, c1, c2, c3;
+	printf("Digite os pontos obtidos pelos três jogadores da Equipe 1:");
+	scanf("%d %d %d", &a1, &a2, &a3);
+	printf("Digite os pontos obtidos pelos três jogadores da Equipe 2:");
+	scanf("%d %d %d", &b1, &b2, &b3);
+	printf("Digite os pontos obtidos pelos três jogadores da Equipe 3:");
+	scanf("%d %d %d", &c1, &c2, &c3);
+	printf("Para Equipe 1 temos:\n");
+	{
+		if (a1<a2<a3)
+		{
+			printf("%d\n %d\n %d\n", a3, a2, a1);
+		}
+		else if (a2<a3<a1)
+		{
+			printf("%d\n %d\n %d\n", a1, a3, a2);
+		}
+		else if (a3<a1<a2)
+		{
+			printf("%d\n %d\n %d\n", a2, a1, a3);
+		}
+		else 
+		{
+			printf("%d\n %d\n %d\n", a3, a1, a2);
+		}
+	}
+	printf("Para Equipe 2 temos:\n");
+	{
+		if (b1<b2<b3)
+		{
+			printf("%d\n %d\n %d\n", b3, b2, b1);
+		}
+		else if (b2<b3<b1)
+		{
+			printf("%d\n %d\n %d\n", b1, b3, b2);
+		}
+		else if (b3<b1<b2)
+		{
+			printf("%d\n %d\n %d\n", b2, b1, b3);
+		}
+		else 
+		{
+			printf("%d\n %d\n %d\n", b3, b1, b2);
+		}
+	}
+	printf("Para Equipe 3 temos:\n");
+	{
+		if (c1<c2<c3)
+		{
+			printf("%d\n %d\n %d\n", c3, c2, c1);
+		}
+		else if (c2<c3<c1)
+		{
+			printf("%d\n %d\n %d\n", c1, c3, c2);
+		}
+		else if (c3<c1<c2)
+		{
+			printf("%d\n %d\n %d\n", c2, c1, c3);
+		}
+		else 
+		{
+			printf("%d\n %d\n %d\n", c3, c1, c2);
+		}
+	}
+}
 
 //20. O banco XXX concederá um crédito especial com juros de 2% aos seus clientes de acordo com o saldomédio no último ano. Faça um programa que leia o saldo médio de um cliente e calcule o valor do crédito de acordo com a tabela a seguir. O programa deve imprimir uma mensagem informando o saldo médio e o valor de crédito.
 //Saldo Médio Percentual
@@ -463,6 +529,6 @@ void q18() {
 
 
 int main() {
-    q18();
+    q19();
     return EXIT_SUCCESS;
 }
