@@ -253,12 +253,33 @@ void q13() {
 //Maior que R$1200,00 e menor ou igual a R$2000,00 25%
 //Maior que R$2000,00 30%
 void q14() {
-	float sal
+	float sal, desc20, desc25, desc30;
+	printf("Digite o valor do seu salário:");
+	scanf("%f", &sal);
+	desc20=sal-(sal/100*20);
+	desc25=sal-(sal/100*25);
+	desc30=sal-(sal/100*30);
+	if (sal<599)
+	{
+		printf("Seu salário é de %f, insento de descontos!\n", sal);
+	}
+	else if (sal>600 && sal<1201)
+	{
+		printf("Seu sálario é de %f, com desconto de 20 porcento fica %f.\n", sal, desc20);
+	}
+	else if (sal>1200 && sal<2001)
+	{
+		printf("Seu sálario é de %f, com desconto de 25 porcento fica %f.\n", sal, desc25);
+	}
+	else if (sal>2000)
+	{
+		printf("Seu sálario é de %f, com desconto de 30 porcento fica %f.\n", sal, desc30);
+	}
 }
 
-
 //15. Um comerciante comprou umproduto e quer vendê-lo com umlucro de 45% se o valor
-//da compra for menor que R$20,00, caso contrário, o lucro será de 30%. Faça um programa que leia o valor do produto e imprima o valor da venda.
+//da compra for menor que R$20,00, caso contrário, o lucro será de 30%. Faça um programa que leia o valor 
+//do produto e imprima o valor da venda.
 
 
 //16. A confederação brasileira de natação irá promover eliminatórias para o próximo
@@ -326,6 +347,6 @@ void q14() {
 
 
 int main() {
-    q13();
+    q14();
     return EXIT_SUCCESS;
 }
