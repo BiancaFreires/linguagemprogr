@@ -277,9 +277,26 @@ void q14() {
 	}
 }
 
-//15. Um comerciante comprou umproduto e quer vendê-lo com umlucro de 45% se o valor
+//15. Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o valor
 //da compra for menor que R$20,00, caso contrário, o lucro será de 30%. Faça um programa que leia o valor 
 //do produto e imprima o valor da venda.
+void q15() {
+	float compra, lucro, lucro45, lucro2, lucro30;
+	printf("Digite o valor do produto que o comerciante comprou:");
+	scanf("%f", &compra);
+	lucro=compra/100*45;
+	lucro45=compra+lucro;
+	if (compra<20)
+	{
+		printf("O lucro será de 45 porcento, totalizando %f.\n", lucro45);
+	}
+	lucro2=compra/100*30;
+	lucro30=compra+lucro;
+	if (compra >19)
+	{
+		printf("O lucro será de 30 porcento, totalizando %f.\n", lucro30);
+	}
+}
 
 
 //16. A confederação brasileira de natação irá promover eliminatórias para o próximo
@@ -347,6 +364,6 @@ void q14() {
 
 
 int main() {
-    q14();
+    q15();
     return EXIT_SUCCESS;
 }
