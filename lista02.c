@@ -307,7 +307,31 @@ void q15() {
 //Juvenil A 11 - 13 anos
 //Juvenil B 14 - 17 anos
 //Sênior maiores de 18 anos
-
+void q16() {
+	int idade;
+	printf("Digite a idade do nadador:");
+	scanf("%d", &idade);
+	if (idade>4 && idade<8)
+	{
+		printf("Idade: %d.\nCategoria: Infantil A.\n", idade);
+	}
+	if (idade>7 && idade<11)
+	{
+		printf("Idade: %d.\nCategoria: Infantil B.\n", idade);
+	}
+	if (idade>10 && idade<14)
+	{
+		printf("Idade: %d.\nCategoria: Juvenil A.\n", idade);
+	}
+	if (idade>13 && idade<18)
+	{
+		printf("Idade: %d.\nCategoria: Juvenil B.\n", idade);
+	}
+	if (idade>17)
+	{
+		printf("Idade: %d.\nCategoria: Sênior.\n", idade);
+	}
+}
 
 //17. Depois da liberação do governo para as mensalidades dos planos de saúde, as pessoas começaram a fazer pesquisas para descobrir um bom plano, não muito caro. Umvendedor de um plano de saúde apresentou a tabela a seguir. Faça um programa que entre com o nome e a idade de uma pessoa e imprima o nome e o valor que ela deverá pagar.
 //Idade Valor
@@ -364,6 +388,6 @@ void q15() {
 
 
 int main() {
-    q15();
+    q16();
     return EXIT_SUCCESS;
 }
