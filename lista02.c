@@ -371,8 +371,55 @@ void q17() {
 	}
 }
 
-//18. Faça um programa que leia um número inteiro entre 1 e 12 e escreva o mês correspondente. Caso o usuário digite umnúmero fora desse intervalo, deverá aparecer uma mensagem informando que não existe mês com este número. Utilize o switch para este problema.
-
+//18. Faça um programa que leia um número inteiro entre 1 e 12 e escreva o mês correspondente. Caso o usuário digite umnúmero fora desse intervalo, 
+//deverá aparecer uma mensagem informando que não existe mês com este número. Utilize o switch para este problema.
+void q18() {
+	int mes;
+	printf("Digite o número do mês desejado:");
+	scanf("%d", &mes);
+	switch(mes)
+	{
+		case 1:
+		printf("Janeiro\n");
+		break;
+		case 2:
+		printf("Fevereiro\n");
+		break;
+		case 3:
+		printf("Março\n");
+		break;
+		case 4:
+		printf("Abril\n");
+		break;
+		case 5:
+		printf("Maio\n");
+		break;
+		case 6:
+		printf("Junho\n");
+		break;
+		case 7:
+		printf("Julho\n");
+		break;
+		case 8:
+		printf("Agosto\n");
+		break;
+		case 9:
+		printf("Setembro\n");
+		break;
+		case 10:
+		printf("Outubro\n");
+		break;
+		case 11:
+		printf("Novembro\n");
+		break;
+		case 12:
+		printf("Dezembro\n");
+		break;
+		default:
+		printf("Mês inexistente!\n");
+		break;
+	}
+}
 
 //19. Em um campeonato nacional de arco-e-flecha, tem-se equipes de três jogadores para cada estado. Sabendo-se que os arqueiros de uma equipe não obtiveram o mesmo número de pontos, criar um programa que informe se uma equipe foi classificada, de acordo com a seguinte especificação:
 //• Ler os pontos obtidos por cada jogador da equipe;
@@ -416,6 +463,6 @@ void q17() {
 
 
 int main() {
-    q17();
+    q18();
     return EXIT_SUCCESS;
 }
