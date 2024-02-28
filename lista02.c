@@ -315,25 +315,26 @@ void q16() {
 	{
 		printf("Idade: %d.\nCategoria: Infantil A.\n", idade);
 	}
-	if (idade>7 && idade<11)
+	else if (idade>7 && idade<11)
 	{
 		printf("Idade: %d.\nCategoria: Infantil B.\n", idade);
 	}
-	if (idade>10 && idade<14)
+	else if (idade>10 && idade<14)
 	{
 		printf("Idade: %d.\nCategoria: Juvenil A.\n", idade);
 	}
-	if (idade>13 && idade<18)
+	else if (idade>13 && idade<18)
 	{
 		printf("Idade: %d.\nCategoria: Juvenil B.\n", idade);
 	}
-	if (idade>17)
+	else if (idade>17)
 	{
 		printf("Idade: %d.\nCategoria: Sênior.\n", idade);
 	}
 }
 
-//17. Depois da liberação do governo para as mensalidades dos planos de saúde, as pessoas começaram a fazer pesquisas para descobrir um bom plano, não muito caro. Umvendedor de um plano de saúde apresentou a tabela a seguir. Faça um programa que entre com o nome e a idade de uma pessoa e imprima o nome e o valor que ela deverá pagar.
+//17. Depois da liberação do governo para as mensalidades dos planos de saúde, as pessoas começaram a fazer pesquisas para descobrir um bom plano, não muito caro. 
+//Um vendedor de um plano de saúde apresentou a tabela a seguir. Faça um programa que entre com o nome e a idade de uma pessoa e imprima o nome e o valor que ela deverá pagar.
 //Idade Valor
 //Até 10 anos R$30,00
 //Acima de 10 até 29 anos R$60,00
@@ -341,7 +342,34 @@ void q16() {
 //Acima de 45 até 59 anos R$150,00
 //Acima de 59 até 65 anos R$250,00
 //Maior que 65 anos R$400,00
-
+void q17() {
+	char nome[40];
+	int idade;
+	printf("Digite o seu nome:");
+	scanf(" %40[^\n]", &nome);
+	printf("Digite a sua idade:");
+	scanf("%d", &idade);
+	if (idade<10)
+	{
+		printf("%s.\nO valor a ser pago é R$30,00.\n", nome);
+	}
+	if (idade>9 && idade<30)
+	{
+		printf("%s.\nO valor a ser pago é R$60,00.\n", nome);
+	}
+	if (idade>28 && idade<46)
+	{
+		printf("%s.\nO valor a ser pago é R$120,00.\n", nome);
+	}
+	if (idade>44 && idade<60)
+	{
+		printf("%s.\nO valor a ser pago é R$150,00.\n", nome);
+	}
+	if (idade>64)
+	{
+		printf("%s.\nO valor a ser pago é R$150,00.\n", nome);
+	}
+}
 
 //18. Faça um programa que leia um número inteiro entre 1 e 12 e escreva o mês correspondente. Caso o usuário digite umnúmero fora desse intervalo, deverá aparecer uma mensagem informando que não existe mês com este número. Utilize o switch para este problema.
 
@@ -388,6 +416,6 @@ void q16() {
 
 
 int main() {
-    q16();
+    q17();
     return EXIT_SUCCESS;
 }
