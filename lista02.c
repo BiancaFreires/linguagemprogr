@@ -493,13 +493,39 @@ void q19() {
 	}
 }
 
-//20. O banco XXX concederá um crédito especial com juros de 2% aos seus clientes de acordo com o saldomédio no último ano. Faça um programa que leia o saldo médio de um cliente e calcule o valor do crédito de acordo com a tabela a seguir. O programa deve imprimir uma mensagem informando o saldo médio e o valor de crédito.
+//20. O banco XXX concederá um crédito especial com juros de 2% aos seus clientes de acordo com o 
+//saldomédio no último ano. Faça um programa que leia o saldo médio de um 
+//cliente e calcule o valor do crédito de acordo com a tabela a seguir. O programa deve imprimir uma 
+//mensagem informando o saldo médio e o valor de crédito.
 //Saldo Médio Percentual
 //de 0 a 500 nenhum crédito
 //de 501 a 1000 30% do valor do saldo médio
 //de 1001 a 3000 40% do valor do saldo médio
 //acima de 3001 50% do valor do saldo médio
-
+void q20() {
+	float smedioano, valordosaldo30, valordosaldo40, valordosaldo50;
+	printf("Digite o seu saldo médio do último ano:");
+	scanf("%f", &smedioano);
+	if (smedioano>0 && smedioano<501)
+	{
+		printf("Sem direito a crédito!\n");
+	}
+	if (smedioano>500 && smedioano<1001)
+	{
+		valordosaldo30=(smedioano/100*30)+smedioano;
+		printf("Crédito de 30 porcento condedido! Totalizando: %f.\n", valordosaldo30);
+	}
+	if (smedioano>1000 && smedioano<3001)
+	{
+		valordosaldo40=(smedioano/100*40)+smedioano;
+		printf("Crédito de 40 porcento condedido! Totalizando: %f.\n", valordosaldo40);
+	}
+	if (smedioano>3000)
+	{
+		valordosaldo50=(smedioano/100*50)+smedioano;
+		printf("Crédito de 50 porcento condedido! Totalizando: %f.\n", valordosaldo50);
+	}
+}
 
 //21. A biblioteca de uma Universidade deseja fazer um programa que leia o nome do livro que será emprestado, o tipo de usuário (professor ou aluno) e possa imprimir um recibo conforme mostrado a seguir. Considerar que o professor tem dez dias para devolver o livro e o aluno só três dias.
 //• Nome do livro:
@@ -529,6 +555,6 @@ void q19() {
 
 
 int main() {
-    q19();
+    q20();
     return EXIT_SUCCESS;
 }
