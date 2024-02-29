@@ -527,10 +527,30 @@ void q20() {
 	}
 }
 
-//21. A biblioteca de uma Universidade deseja fazer um programa que leia o nome do livro que será emprestado, o tipo de usuário (professor ou aluno) e possa imprimir um recibo conforme mostrado a seguir. Considerar que o professor tem dez dias para devolver o livro e o aluno só três dias.
+//21. A biblioteca de uma Universidade deseja fazer um programa que leia o nome do livro que será emprestado, 
+//o tipo de usuário (professor ou aluno) e possa imprimir um recibo conforme mostrado a seguir. 
+//Considerar que o professor tem dez dias para devolver o livro e o aluno só três dias.
 //• Nome do livro:
 //• Tipo de usuário:
 //• Total de dias:
+void q21() {
+	char livro[60], user;
+	printf("Digite 1 para aluno e 2 para professor:\n");
+	switch (user)
+	{
+		case 1:
+		printf("Nome do livro desejado:");
+		scanf(" %60[^\n]", &livro);
+		printf("O livro %s foi emprestado para um aluno e possui um prazo de três dias para devolução.\n", livro);
+		break;
+		case 2:
+		printf("O livro %s foi emprestado para um professor e possui um prazo de dez dias para devolução.\n", livro);
+		break;
+		default:
+		printf("O livro %s não pode ser emprestado!\n", livro);
+		break;
+	}
+}
 
 
 //22. Construa um programa que leia o percurso em quilómetros, o tipo do carro e informe o consumo estimado de combustível, sabendo-se que umcarro tipo C faz 12 kmcom umlitro de gasolina, um tipo B faz 9 kme o tipo C, 8 kmpor litro.
@@ -555,6 +575,6 @@ void q20() {
 
 
 int main() {
-    q20();
+    q21();
     return EXIT_SUCCESS;
 }
