@@ -534,34 +534,64 @@ void q20() {
 //• Tipo de usuário:
 //• Total de dias:
 void q21() {
-	char livro[60], user;
-	printf("Digite 1 para aluno e 2 para professor:\n");
-	switch (user)
+	char livro[35];
+	int num;
+	printf("Qual o nome do livro que será emprestado?");
+	scanf(" %35[^\n]", &livro);
+	printf("Digite 1 para aluno e 2 para professor.\n");
+	scanf("%d", &num);
+	if (num==1)
 	{
-		case 1:
-		printf("Nome do livro desejado:");
-		scanf(" %60[^\n]", &livro);
-		printf("O livro %s foi emprestado para um aluno e possui um prazo de três dias para devolução.\n", livro);
-		break;
-		case 2:
-		printf("O livro %s foi emprestado para um professor e possui um prazo de dez dias para devolução.\n", livro);
-		break;
-		default:
-		printf("O livro %s não pode ser emprestado!\n", livro);
-		break;
+		printf("O livro que você pegará emprestado é %s, você é aluno e o seu total de dias de emprestimo é 3!\n", livro);
+	}
+	if (num==2)
+	{
+		printf("O livro que você pegará emprestado é %s, você é professor e o seu total de dias de emprestimo é 10!\n", livro);
 	}
 }
 
+//22. Construa um programa que leia o percurso em quilómetros, o tipo do carro e informe o consumo estimado de combustível, sabendo-se que um carro tipo A faz 12 km com
+// um litro de gasolina, um tipo B faz 9 kme o tipo C, 8 km por litro.
+void q22() {
+	float km, tip, consA, consB, consC;
+	const float A=12.0, B=9.0, C=8.0;
+	printf("Informe o percurso em quilometros desejado:");
+	scanf("%f", &km);
+	printf("Se o seu carro for tipo A, digite 1. Se o seu carro for tipo B, digite 2. Se o seu carro for tipo C, digite 3.");
+	scanf("%f", &tip);
+	if (tip==1)
+	{
+		consA=km/A;
+		printf("O percurso em quilometros é %f. Seu carro é tipo A e seu carro faz %f km/l.\n", km, consA);
+	}
+	if (tip==2)
+	{
+		consB=km/B;
+		printf("O percurso em quilometros é %f. Seu carro é tipo B e seu carro faz %f km/l.\n", km, consB);
+	}
+		if (tip==3)
+	{
+		consC=km/C;
+		printf("O percurso em quilometros é %f. Seu carro é tipo C e seu carro faz %f km/l.\n", km, consC);
+	}
+}
 
-//22. Construa um programa que leia o percurso em quilómetros, o tipo do carro e informe o consumo estimado de combustível, sabendo-se que umcarro tipo C faz 12 kmcom umlitro de gasolina, um tipo B faz 9 kme o tipo C, 8 kmpor litro.
-
-
-//23. Crie um programa que informe a quantidade total de calorias de uma refeição a partir da escolha do usuário que deverá informar o prato, a sobremesa, e bebida conforme a tabela a seguir.
+//23. Crie um programa que informe a quantidade total de calorias de uma refeição a partir da escolha do usuário que deverá informar o prato, a sobremesa, 
+//e bebida conforme a tabela a seguir.
 //Prato Sobremesa Bebida
 //Vegetariano 180cal Abacaxi 75cal Chá 20cal
 //Peixe 230cal Sorvete diet 110cal Suco de laranja 70cal
 //Frango 250cal Mousse diet 170cal Suco de melão 100cal
 //Carne 350cal Mousse chocolate 200cal Refrigerante diet 65cal
+void q23() {
+	float pp, sm, beb;
+	printf("Para prato principal digite 1 para Vegetariano, 2 para Peixe, 3 para Frango e 4 para Carne:");
+	scanf("%f", &pp);
+	printf("Para sobremesa digite 1 para Abacaxi, 2 para Sorvete Diet, 3 para Mousse Diet e 4 para Mousse de Chocolate:");
+	scanf("%f", &sm);
+	printf("Para bebida digite 1 para Chá, 2 para Suco de Laranja, 3 para Suco de Melão e 4 para Refrigerante Diet:");
+	scanf("%f", &beb);
+}
 
 
 //24. A polícia rodoviária resolveu fazer cumprir a lei e vistoriar veículos para cobrar dosmotoristas o DUT. Sabendo-se que o mês em que o emplacamento do carro deve ser renovado é determinado pelo último número da placa do mesmo, faça um programa que, a partir da leitura da placa do carro, informe omês em que o emplacamento deve ser renovado.
@@ -575,6 +605,6 @@ void q21() {
 
 
 int main() {
-    q21();
+    q22();
     return EXIT_SUCCESS;
 }
