@@ -594,17 +594,59 @@ void q23() {
 }
 
 
-//24. A polícia rodoviária resolveu fazer cumprir a lei e vistoriar veículos para cobrar dosmotoristas o DUT. Sabendo-se que o mês em que o emplacamento do carro deve ser renovado é determinado pelo último número da placa do mesmo, faça um programa que, a partir da leitura da placa do carro, informe omês em que o emplacamento deve ser renovado.
+//24. A polícia rodoviária resolveu fazer cumprir a lei e vistoriar veículos para cobrar dos motoristas o DUT. Sabendo-se que o mês em que o emplacamento do carro deve ser 
+//renovado é determinado pelo último número da placa do mesmo, faça um programa que, a partir da leitura da placa do carro, informe omês em que o emplacamento deve ser renovado.
+void q24() {
+	int emplacamento;
+	printf("Informe o último número da placa do seu carro:");
+	scanf("%d", &emplacamento);
+	switch (emplacamento)
+	{
+		case 0:
+		printf("Janeiro\n");
+		break;
+		case 1:
+		printf("Fevereiro\n");
+		break;
+		case 2:
+		printf("Março\n");
+		break;
+		case 3:
+		printf("Abril\n");
+		break;
+		case 4:
+		printf("Maio\n");
+		break;
+		case 5:
+		printf("Junho\n");
+		break;
+		case 6:
+		printf("Julho\n");
+		break;
+		case 7:
+		printf("Agosto\n");
+		break;
+		case 8:
+		printf("Setembro\n");
+		break;
+		case 9:
+		printf("Outubto\n");
+		break;
+	}
+}
 
-
-//25. A prefeitura contratou uma firma especializada para manter os níveis de poluição considerados ideais para umpaís do 1º mundo. As indústrias, maiores responsáveis pela poluição, foram classificadas em três grupos. Sabendo-se que a escala utilizada varia de 0,05 e que o índice de poluição aceitável é até 0,25, fazer um programa que possa imprimir intimações de acordo com o índice e a tabela a seguir:
+//25. A prefeitura contratou uma firma especializada para manter os níveis de poluição considerados ideais para um país do 1º mundo. As indústrias, maiores responsáveis 
+//pela poluição, foram classificadas em três grupos. Sabendo-se que a escala utilizada varia de 0,05 e que o índice de poluição aceitável é até 0,25, 
+//fazer um programa que possa imprimir intimações de acordo com o índice e a tabela a seguir:
 //Índice Indústrias que receberão intimação
 //0,3 1º gurpo
 //0,4 1º e 2º grupos
 //0,5 1º, 2º e 3º grupos
-
+void q25() {
+	float 
+}
 
 int main() {
-    q22();
+	q24();
     return EXIT_SUCCESS;
 }
