@@ -643,10 +643,21 @@ void q24() {
 //0,4 1º e 2º grupos
 //0,5 1º, 2º e 3º grupos
 void q25() {
-	float 
+	float nivel;
+	printf("Informe o nível de poluição da indústria:");
+	scanf("%f", &nivel);
+	printf("Sabendo que a escala utilizada varia de 0,05 e que o índice de poluição aceitável é até 0,25 e o seu nível de poluição é %f, a indústria é considerada:", nivel);
+	if (nivel<=0.25f)
+		printf("Aceitável.\n");
+	else if (nivel<=0.3f)
+		printf("Você recebe intimação do 1º grupo, sendo considerado nível alto.\n");
+	else if (nivel<=0.4f)
+		printf("Você recebe intimação do 1º e 2º grupo, sendo considerado nível muito alto.\n");
+	else
+		printf("Você recebe intimação do 1º, 2º e 3º grupo, sendo considerado nível crítico.\n");
 }
 
 int main() {
-	q24();
+	q25();
     return EXIT_SUCCESS;
 }
