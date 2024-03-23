@@ -39,7 +39,8 @@ void q03() {
 void q04() {
     int idade;
     char nome[40];
-    
+    printf("Qual o seu nome:");
+    scanf(" %40^", &nome)
 }
 
 //5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
