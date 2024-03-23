@@ -27,11 +27,20 @@ void q02() {
 //3. Faça um programa que imprima os múltiplos de 5, no intervalo de 1 até 500.
 void q03() {
     int cont;
+    for(cont=0; cont<=500; cont+=5)
+    {
+        printf("%d\n", cont);
+    }
 }
 
 //4. Faça umprograma que permita entrar com o nome, a idade e o sexo de 20
 //pessoas.O programa deve imprimir o nome da pessoa se ela for do sexo masculino
 //e tiver mais de 21 anos.
+void q04() {
+    int idade;
+    char nome[40];
+    
+}
 
 //5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
 //sucessivas, crie um programa que calcule o produto de dois números inteiros
@@ -276,6 +285,6 @@ void q03() {
 //idade.
 
 int main() {
-    q02();
+    q03();
 	return EXIT_SUCCESS;
 }
