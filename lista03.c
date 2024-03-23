@@ -7,11 +7,28 @@ EXERCÍCIOS DO CAPÍTULO 3
 #include <math.h>
 
 //1.Faça um programa que imprima todos os números de 1 até 100.
+void q01() {
+    int cont;
+    for (cont=0; cont<=100; cont++)
+    {
+        printf("%d\n", cont);
+    }
+}
 
 //2. Faça um programa que imprima todos os números pares de 100 até 1.
+void q02() {
+    int cont;
+    for (cont=100; cont>0; cont-=2)
+    {
+        printf("%d\n", cont);
+    }
+}
 
 //3. Faça um programa que imprima os múltiplos de 5, no intervalo de 1 até 500.
-        
+void q03() {
+    int cont;
+}
+
 //4. Faça umprograma que permita entrar com o nome, a idade e o sexo de 20
 //pessoas.O programa deve imprimir o nome da pessoa se ela for do sexo masculino
 //e tiver mais de 21 anos.
@@ -259,6 +276,6 @@ EXERCÍCIOS DO CAPÍTULO 3
 //idade.
 
 int main() {
-    q01();
+    q02();
 	return EXIT_SUCCESS;
 }
