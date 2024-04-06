@@ -37,21 +37,54 @@ void q03() {
 //pessoas.O programa deve imprimir o nome da pessoa se ela for do sexo masculino
 //e tiver mais de 21 anos.
 void q04() {
-    int idade;
+    int gen, idade, cont;
     char nome[40];
-    printf("Qual o seu nome:");
-    scanf(" %40^", &nome)
+    for(cont=0; cont<20; cont++)
+    {
+        printf("Qual o seu nome:");
+        scanf(" %40[^\n]", &nome);
+        printf("Digite 1 se você for do gênero masculino e 2 se você for do gênero feminino.");
+        scanf("%d", &gen);
+        printf("Quantos anos você tem?");
+        scanf("%d", &idade);
+        if (gen==1 && idade>20)
+        {
+            printf("Nome: %s\n Gênero: %d\n Idade: %d\n", nome, gen, idade);
+        }
+    }
 }
 
 //5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
 //sucessivas, crie um programa que calcule o produto de dois números inteiros
 //lidos. Suponha que os números lidos sejam positivos.
+void q05() {
+    int cont, num1, num2, resultado=0;
+    printf("Digite dois números:");
+    scanf("%d %d", &num1, &num2);
+    for (cont=0; cont<num1; cont++)
+    {
+        resultado+=num2;
+    }
+    printf("Resultado: %d\n", resultado);
+}
 
 //6. Crie um programa que imprima os 20 primeiros termos da série de Fibonacci.
 //Observação: os dois primeiros termos desta série são 1 e 1 e os demais são gerados
 //a partir da soma dos anteriores. Exemplo:
 //• 1 + 1 = 2, terceiro termo;
 //• 1 + 2 = 3, quarto termo, etc.
+void q06() {
+    int num1, num2, result, result2, cont;
+    printf("Digite o número 1 duas vezes para dar ínicio aos termos:");
+    scanf("%d %d", &num1, &num2);
+    for (cont=0; cont<=1; cont++)
+    {
+        result+=num2;
+        result2+=result;
+    }
+    printf("Primeiro termo: %d\n", result);
+    printf("Segundo termo: %d\n", result2);
+}
 
 //7. Crie um programa que permita entrar com o nome, a nota da
 //prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
@@ -286,6 +319,6 @@ void q04() {
 //idade.
 
 int main() {
-    q03();
+    q06();
 	return EXIT_SUCCESS;
 }
