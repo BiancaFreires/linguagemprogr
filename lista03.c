@@ -5,6 +5,7 @@ EXERCÍCIOS DO CAPÍTULO 3
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
 
 //1.Faça um programa que imprima todos os números de 1 até 100.
 void q01() {
@@ -65,7 +66,7 @@ void q05() {
     {
         resultado+=num2;
     }
-    printf("Resultado: %d\n", resultado);
+    printf("Resultado: %d\n", &resultado);
 }
 
 //6. Crie um programa que imprima os 20 primeiros termos da série de Fibonacci.
@@ -74,22 +75,52 @@ void q05() {
 //• 1 + 1 = 2, terceiro termo;
 //• 1 + 2 = 3, quarto termo, etc.
 void q06() {
-    int num1, num2, result, result2, cont;
-    printf("Digite o número 1 duas vezes para dar ínicio aos termos:");
-    scanf("%d %d", &num1, &num2);
-    for (cont=0; cont<=1; cont++)
+    const int N = 20;
+    unsigned long long a = 1, b = 1, c;
+    printf("Os primeiros %d termos da série de Fibonacci são:\n", N);
+    printf("%llu %llu ", a, b);
+    for (int i = 3; i <= N; ++i) 
     {
-        result+=num2;
-        result2+=result;
+       c = a + b;
+       printf("%llu ", c);
+       a=b;
+       b=c;
     }
-    printf("Primeiro termo: %d\n", result);
-    printf("Segundo termo: %d\n", result2);
+    printf("\n");
 }
 
 //7. Crie um programa que permita entrar com o nome, a nota da
 //prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
 //nome, nota da prova 1, nota da prova 2, e média das notas de cada aluno. Ao final,
 //imprimir a média geral da turma.
+void q07() {
+    char nome1[100];
+    char nome2[100];
+    char nome3[100];
+    char nome4[100];
+    char nome5[100];
+    char nome6[100];
+    char nome7[100];
+    char nome8[100];
+    char nome9[100];
+    char nome10[100];
+    char nome11[100];
+    char nome12[100];
+    char nome13[100];
+    char nome14[100];
+    char nome15[100];
+    float nota11, nota12, nota13, nota14, nota15, nota16, nota17, nota18, nota19, nota110, nota111,
+    nota112, nota113, nota114, nota115, nota21, nota22, nota23, nota24, nota25, nota26, nota27, nota28,
+    nota29, nota210, nota211,nota212, nota213, nota214, nota215, media1, media2, media3, media4, 
+    media5, media6, media7, media8, media9, media10, media11, media12, media13, media14, media15, 
+    mediaGeral;
+    printf("Digite o nome do aluno 1:");
+    scanf(" %100[^\n]", &nome1);
+    printf("Digite as notas do aluno 1:");
+    scanf("%f %f", &nota11, &nota21);
+    media1=nota11+nota21/2;
+    printf("Aluno:", &nome1, "Nota 1:", &nota11, "Nota 2:" ,&nota21, "Média:" ,&media1);
+}
 
 //8. Faça umprograma que permita entrar com o nome e o salário bruto de 10 pessoas.
 //Após ler os dados, imprimir o nome e o valor da alíquota do imposto de renda
@@ -319,6 +350,6 @@ void q06() {
 //idade.
 
 int main() {
-    q06();
+    q07();
 	return EXIT_SUCCESS;
 }
