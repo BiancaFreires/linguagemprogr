@@ -94,32 +94,34 @@ void q06() {
 //nome, nota da prova 1, nota da prova 2, e média das notas de cada aluno. Ao final,
 //imprimir a média geral da turma.
 void q07() {
-    char nome1[100];
-    char nome2[100];
-    char nome3[100];
-    char nome4[100];
-    char nome5[100];
-    char nome6[100];
-    char nome7[100];
-    char nome8[100];
-    char nome9[100];
-    char nome10[100];
-    char nome11[100];
-    char nome12[100];
-    char nome13[100];
-    char nome14[100];
-    char nome15[100];
-    float nota11, nota12, nota13, nota14, nota15, nota16, nota17, nota18, nota19, nota110, nota111,
-    nota112, nota113, nota114, nota115, nota21, nota22, nota23, nota24, nota25, nota26, nota27, nota28,
-    nota29, nota210, nota211,nota212, nota213, nota214, nota215, media1, media2, media3, media4, 
-    media5, media6, media7, media8, media9, media10, media11, media12, media13, media14, media15, 
-    mediaGeral;
-    printf("Digite o nome do aluno 1:");
-    scanf(" %100[^\n]", &nome1);
-    printf("Digite as notas do aluno 1:");
-    scanf("%f %f", &nota11, &nota21);
-    media1=nota11+nota21/2;
-    printf("Aluno:", &nome1, "Nota 1:", &nota11, "Nota 2:" ,&nota21, "Média:" ,&media1);
+    int MAX = 3;
+    char nomes[MAX][100];
+    float nota1[MAX], nota2[MAX], media[MAX], mediaGeral = 0.0;
+    for (int i=0; i<MAX; i++) 
+    {
+        printf("Digite o nome do aluno %d:", (i+1));
+        scanf(" %100[^\n]", &nomes[i][0]);
+        printf("Digite a nota 1 do aluno %d:", (i+1));
+        scanf(" %f", &nota1[i]);
+        printf("Digite a nota 2 do aluno %d:", (i+1));
+        scanf(" %f", &nota2[i]);
+        media[i]=(nota1[i]+nota2[i])/2.0;
+        mediaGeral += media[i];
+    }
+    /*
+    for (int i=0; i<MAX; i++) {  
+        printf("%s\n", &nomes[i])
+             printf("%f\n", nota1[i]);
+                printf("%f\n", nota2[i]);
+                        printf("%f\n", media[i]);
+    } 
+    */ 
+    mediaGeral = mediaGeral / MAX;
+    for (int i=0; i<MAX; i++) {    
+        printf("\nAluno: %s \nNota 1: %.2f \nNota 2: %.2f \nMédia: %.2f \n", nomes[i], nota1[i], nota2[i], media[i]);
+    }
+    printf("\nMédia Geral: %.2f", mediaGeral);
+
 }
 
 //8. Faça umprograma que permita entrar com o nome e o salário bruto de 10 pessoas.
